@@ -48,7 +48,7 @@ def predict(pred_text):
     import statistics
     import operator
 
-    path = path
+    path = "./models"
     
     folders = ["/call_to_action", "/credibility_statement","/greeting","/intention_statement",
                 "/intro","/problem_statement","/sign_off","/value_prop","/warm_up"]
@@ -102,7 +102,7 @@ def predict_cta(pred_text):
     import statistics
     import operator
 
-    path = path+"/call_to_action_models"
+    path = "./models"+"/call_to_action_models"
     
     folders = ['/meeting_cta', '/feedback_cta', '/response_cta', '/action_cta',
                 '/need_validation_cta', '/information_cta', '/webinar_cta', 
@@ -157,7 +157,7 @@ def predict_warmup(pred_text):
     import statistics
     import operator
 
-    path = path+"/warm_ups"
+    path = "./models"+"/warm_ups"
     
     folders = ['/gratitude_warmup', '/intention_warmup', 
                 '/personal_warmup','/relevance_warmup',
@@ -213,7 +213,7 @@ def predict_valueprop(pred_text):
     import statistics
     import operator
 
-    path = path+"/value_props"
+    path = "./models"+"/value_props"
     
     folders = ['/benefit_value_prop', '/summary_value_prop', 
                 '/feature_value_prop','/risk_reduction_value_prop',
@@ -271,7 +271,7 @@ def predict_credibility(pred_text):
     import statistics
     import operator
 
-    path = path+"/credibility_statements"
+    path = "./models"+"/credibility_statements"
     
     folders = ['/appeal_to_experience', '/appeal_to_success', 
                 '/appeal_to_social_proof'
