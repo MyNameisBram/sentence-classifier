@@ -18,7 +18,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 # path 
-path = "/Users/bramtunggala/CrystalKnows/project-04-sentence-classifier/03-models"
+path = "./models"
 
 # folder names where models live
 folders = [
