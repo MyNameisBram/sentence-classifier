@@ -1,4 +1,4 @@
 pandas
 scikit-learn
 streamlit == 0.87
-pickle
+pickle5
