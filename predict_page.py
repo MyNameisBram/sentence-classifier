@@ -477,33 +477,33 @@ def show_predict_page():
         # run prediction function 
         pred, conf = predict(query)
 
-        st.write("Sentence Category: {}  -----  Confidence: {}".format(pred, conf) )
+        st.write("Sentence Category: {}  ----->  Confidence: {}".format(pred, conf) )
    
         if pred == "call_to_action":
             pred, pred_conf = predict_cta(query)
 
-            st.write("CTA Type: {}. -----  Confidence: {}".format(pred, pred_conf))
+            st.write("CTA Type: {}. ----->  Confidence: {}".format(pred, pred_conf))
   
         if pred == "warm_up":
             pred, pred_conf = predict_warmup(query)
 
-            st.write("Warm-up Type: {}  -----  Confidence: {}".format(pred, pred_conf))
+            st.write("Warm-up Type: {}  ----->  Confidence: {}".format(pred, pred_conf))
             
 
         if pred == "value_prop":
             pred, pred_conf = predict_valueprop(query)
 
-            st.write("Value-prop Type: {}  -----  Confidence: {}".format(pred, pred_conf))
+            st.write("Value-prop Type: {}  ----->  Confidence: {}".format(pred, pred_conf))
             
 
         if pred == "credibility_statement":
             pred, pred_conf = predict_credibility(query)
 
-            st.write("Credibility Type: {}. -----  Confidence: {}".format(pred, pred_conf))
+            st.write("Credibility Type: {}. ----->  Confidence: {}".format(pred, pred_conf))
         
         # run predict_style function    
         pred, casual, formal = predict_style(query)
         
         st.write("Style: {}".format(pred))
-        st.write("Confidence --> Casual: {} | Formal: {}".format(casual, formal))
+        st.write("Confidence  ----->  Casual: {}  |  Formal: {}".format(casual, formal))
             
