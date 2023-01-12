@@ -450,13 +450,25 @@ def predict_style(new_text):
     # threshold of .5 
     if casual > formal:
         pred = "casual"
+        if pred < .507913:
+            conf = "kinda confident it's {}".format(pred)
+        if pred >= .507913 and pred < .669477:
+            conf = "pretty confident it's {}".format(pred) 
+        if pred >= .669477:
+            conf = "very confident it's {}".format(pred) 
     if formal > casual:
         pred = "formal"
+        if pred < .640507:
+            conf = "kinda confident it's {}".format(pred)
+        if pred >= .640507 and pred < .77:
+            conf = "pretty confident it's {}".format(pred) 
+        if pred >= .77:
+            conf = "very confident it's {}".format(pred) 
     if casual == formal:
         pred = "not available"
 
 
-    return pred, casual, formal
+    return pred, conf, casual, formal
 
 
 
@@ -502,8 +514,9 @@ def show_predict_page():
             st.write("Credibility Type: {}. ----->  Confidence: {}".format(pred, pred_conf))
         
         # run predict_style function    
-        pred, casual, formal = predict_style(query)
+        pred, conf, casual, formal = predict_style(query)
         
         st.write("Style: {}".format(pred))
+        st.write("--- {} ---".format(conf)
         st.write("Confidence  ----->  Casual: {}  |  Formal: {}".format(casual, formal))
             
