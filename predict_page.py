@@ -518,8 +518,8 @@ def show_predict_page():
         
         x = 123456789
         
-        st.write("Style: {} ...... {}".format(pred,conf))
-        st.write("--- {} ---".format(conf))
+        st.write("Style: {}".format(conf))
+        #st.write("--- {} ---".format(conf))
         st.write("Confidence  ----->  Casual: {}  |  Formal: {}".format(casual, formal))
-        st.write("this is a simple test {]".format(x))
+        
             
