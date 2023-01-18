@@ -5,7 +5,7 @@ classify sentence type from emails
 
 
 ## Code snippet
-```json
+```
 
 curl --location --request POST 'http://localhost:5000/predict' \
 --header 'Content-Type: application/json' \
