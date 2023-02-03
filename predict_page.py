@@ -483,7 +483,7 @@ def show_predict_page():
 
 
 
-    st.write("""### Enter a complete sentence to identify the sentence 1) category 2) lenght 3) tone """)
+    st.write("""### Enter a complete sentence to identify the sentence 1) category 2) lenght 3) tone.""")
     query = st.text_area("Enter text here 👇", "", max_chars=300)
     
     if query != "":
