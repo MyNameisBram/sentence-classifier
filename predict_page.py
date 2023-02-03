@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import warnings
 warnings.filterwarnings("ignore")
+from concise_elaborate import *
 
 #from sklearn.model_selection import train_test_split
 #from sklearn.feature_extraction.text import CountVectorizer
@@ -489,28 +490,40 @@ def show_predict_page():
         # run prediction function 
         pred, conf = predict(query)
 
+
         st.write("Sentence Category: {}  ----->  Confidence: {}".format(pred, conf) )
    
         if pred == "call_to_action":
-            pred, pred_conf = predict_cta(query)
+            text_len = predict_concise_elaborate(query, pred)
+            st.write("Text Length is: {}".format(text_len))
 
+            pred, pred_conf = predict_cta(query)
             st.write("CTA Type: {}. ----->  Confidence: {}".format(pred, pred_conf))
+            
+
+
   
         if pred == "warm_up":
-            pred, pred_conf = predict_warmup(query)
+            text_len = predict_concise_elaborate(query, pred)
+            st.write("Text Length is: {}".format(text_len))
 
+            pred, pred_conf = predict_warmup(query)
             st.write("Warm-up Type: {}  ----->  Confidence: {}".format(pred, pred_conf))
             
 
         if pred == "value_prop":
-            pred, pred_conf = predict_valueprop(query)
+            text_len = predict_concise_elaborate(query, pred)
+            st.write("Text Length is: {}".format(text_len))
 
+            pred, pred_conf = predict_valueprop(query)
             st.write("Value-prop Type: {}  ----->  Confidence: {}".format(pred, pred_conf))
             
 
         if pred == "credibility_statement":
-            pred, pred_conf = predict_credibility(query)
+            text_len = predict_concise_elaborate(query, pred)
+            st.write("Text Length is: {}".format(text_len))
 
+            pred, pred_conf = predict_credibility(query)
             st.write("Credibility Type: {}. ----->  Confidence: {}".format(pred, pred_conf))
         
         # run predict_style function    
