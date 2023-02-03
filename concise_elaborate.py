@@ -79,7 +79,7 @@ def predict_concise_elaborate(text, sentence_cat):
     df = pd.DataFrame()
     df['sentence'] = text
     # word count 
-    df['word_count'] = df.sentence.apply(lambda x: len(str(x).split(" "))
+    df['word_count'] = df.sentence.apply(lambda x: len(str(x).split(" ")))
 
     if sentence_cat == 'call_to_action':
         df['label'] = df.apply(cta, axis=1)
