@@ -483,7 +483,7 @@ def show_predict_page():
 
 
 
-    st.write("""### Enter a complete sentence to identify the sentence category and if it's casual or formal.""")
+    st.write("""### Enter a complete sentence to identify the sentence 1) category 2) lenght 3) tone """)
     query = st.text_area("Enter text here 👇", "", max_chars=300)
     
     if query != "":
@@ -531,7 +531,7 @@ def show_predict_page():
         
         x = 123456789
         
-        st.write("Style: {}".format(conf))
+        st.write("Tone: {}".format(conf))
         #st.write("--- {} ---".format(conf))
         st.write("Confidence  ----->  Casual: {}  |  Formal: {}".format(casual, formal))
         
