@@ -71,6 +71,18 @@ def warm_up(x):
         return "elaborate"
     else:
         return "average"
+    
+    
+def intro(x):
+    lower = 13
+    upper = 23.5
+    
+    if x < lower:
+        return "concise"
+    elif x > upper:
+        return "elaborate"
+    else:
+        return "average"
       
       
       
@@ -92,7 +104,8 @@ def predict_concise_elaborate(text, sentence_cat):
         x = value_prop(text_len)
     elif sentence_cat == 'warm_up':
         x = warm_up(text_len)
-                                
+    elif sentence_cat == 'intro':
+        x = intro(text_len)                            
     
     return x
 
