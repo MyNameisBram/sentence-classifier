@@ -525,6 +525,14 @@ def show_predict_page():
 
             pred, pred_conf = predict_credibility(query)
             st.write("Credibility Type: {}. ----->  Confidence: {}".format(pred, pred_conf))
+            
+           
+            
+        if pred == "intro":
+            text_len = predict_concise_elaborate(query, pred)
+            st.write("Text Length is: {}".format(text_len))
+            
+            
         
         # run predict_style function    
         pred, conf, casual, formal = predict_style(query)
